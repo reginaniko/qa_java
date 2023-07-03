@@ -47,14 +47,10 @@ public class LionTest {
         assertEquals(expectedFood, actualFood);
     }
 
-    @Test
-    public void exceptionWhenEnteringWrongSexTest(){
-        String sex = "abc";
-        try {
-            Lion lion = new Lion(sex, mockFeline);
-            Assert.fail("Exception thrown");
-        } catch (Exception thrown) {
-            assertNotEquals(sex, thrown.getMessage());
-        }
+    @Test(expected = Exception.class)
+    public void exceptionWhenEnteringWrongSexTest() throws Exception {
+        String invalidSex = "abc";
+
+        Lion lion = new Lion(invalidSex, mockFeline);
     }
 }
