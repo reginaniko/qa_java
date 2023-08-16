@@ -21,3 +21,17 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+#IDE's project files
+.idea
+
+#target directory with the exclusion of site/jacoco folder
+!target/site/jacoco
+target/surefire-reports
+target/maven-archiver
+target/maven-status
+target/classes
+target/jacoco.exec
+
+#.DS_Store
+.DS_Store
